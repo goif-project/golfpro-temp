@@ -1,7 +1,9 @@
 const $ = require("jquery");
 
 function agoTest(){
-  alert("ago");
+  console.log("ago");
 }
 
-export {agoTest}
+agoTest();
+
+export {agoTest};

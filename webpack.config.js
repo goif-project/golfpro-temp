@@ -9,7 +9,8 @@ module.exports = {
   context: appDir,
 
   entry: {
-    bundle: './js/app.js',
+    // key名がコンパイル後のファイル名
+    bundle:   './js/app.js',
   },
   output: {
     path: buildDir,
@@ -44,7 +45,8 @@ module.exports = {
 
   plugins: [
     new htmlWebpackPlugin({
-      title: 'INDEX',
+      title:    'INDEX',
+      filename: 'index.html',
       template: './pug/index.pug'
     }),
     new htmlWebpackPlugin({
