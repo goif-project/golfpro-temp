@@ -1,24 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-class Button extends React.Component{
-  localHandleClick(){
-    this.props.localHandleClick(this.props.increment)
-  }
-  render(){
-    return (
-      <button onClick={this.localHandleClick}>{this.props.increment}</button>
-    )
-  }
-}
-
-class Result extends React.Component{
-  render(){
-    return(
-      <div>{this.props.localCounter}</div>
-    )
-  }
-}
 class Main extends React.Component{
   constructor(props){
     super(props);                                               this.state = {
@@ -41,13 +23,32 @@ class Main extends React.Component{
           <Button localHandleClick={this.handleClick} increment={3} />
           <Button localHandleClick={this.handleClick} increment={4} />
         </div>
-        <form action="page3.html" method="post">
-          <input type="hidden" name="counter_num" value={this.state.counter} />
-          <button className="connect" type="submit" name="coutner_btn" Onclick="funcBtn();">
+        <form action="page3.html" name="char_post" id="my_form">
+          <input id="counter_num" type="hidden" name="counter_num" value={this.state.counter} />
+          <button className="connect" type="submit" id="btn_click" >
             送信
           </button>
         </form>
       </div>
+    )
+  }
+}
+
+class Button extends React.Component{
+  localHandleClick(){
+    this.props.localHandleClick(this.props.increment)
+  }
+  render(){
+    return (
+      <button onClick={this.localHandleClick}>{this.props.increment}</button>
+    )
+  }
+}
+
+class Result extends React.Component{
+  render(){
+    return(
+      <div>{this.props.localCounter}</div>
     )
   }
 }

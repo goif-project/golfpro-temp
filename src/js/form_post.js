@@ -1,14 +1,19 @@
 const $ = require("jquery")
 
-// function form_post(frm){
-//   if(frm.elements["counter_num"].value==""){
-//     alert("未選択");
-//     /* FALSEを返してフォームは送信しない */
-//     return false;
-//   }else{
-//     /* TRUEを返してフォーム送信 */
-//     return true;
-//   }
-// }
-//
-// export {form_post}
+function btn_post(){
+  var url   = location.href;
+  var parameters    = url.split("?");
+  if(parameters[1] != null){
+    var paramsArray = [];
+    var neet = parameters[1].split("=");
+    var neet1 = neet[1];
+    var str = $(':hidden[name="counter_num"]').val();
+    sessionStorage.setItem(['char_post'],[str]);
+
+    var a = window.sessionStorage.getItem(['char_post']);
+    $("#post").append(neet1);
+  }
+}
+
+btn_post();
+export {btn_post};
