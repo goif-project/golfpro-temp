@@ -1,6 +1,6 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
-const path = require('path');
+const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const appDir = path.resolve(__dirname, 'src')
 const buildDir = path.resolve(__dirname, 'dist')
@@ -51,8 +51,18 @@ module.exports = {
     }),
     new htmlWebpackPlugin({
       title: 'AGO',
-      filename: 'ago.html',
-      template: './pug/ago.pug'
+      filename: 'page1.html',
+      template: './pug/page1.pug'
+    }),
+    new htmlWebpackPlugin({
+      title: 'PAGE2',
+      filename: 'page2.html',
+      template: './pug/page2.pug'
+    }),
+    new htmlWebpackPlugin({
+      title: 'PAGE3',
+      filename: 'page3.html',
+      template: './pug/page3.pug'
     }),
     /*
     new htmlWebpackPlugin({
