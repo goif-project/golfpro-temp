@@ -15,7 +15,9 @@ class Button extends React.Component{
 class Result extends React.Component{
   render(){
     return(
-      <div>{this.props.localCounter}</div>
+      <div className={"char"+this.props.localCounter}>
+        {this.props.localCounter}
+      </div>
     )
   }
 }
@@ -47,8 +49,8 @@ class Main extends React.Component{
         </div>
         <form action="page3.html" name="char_post" id="my_form">
           <input id="counter_num" type="hidden" name="counter_num" value={this.state.counter} />
-          <button className="connect" type="submit" id="btn_click" >
-            送信
+          <button className="connect page2" type="submit" id="btn_click" >
+            START
           </button>
         </form>
       </div>
