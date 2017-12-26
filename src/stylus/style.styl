@@ -1,8 +1,7 @@
-@charset "UTF-8";
-
-*
-  padding 0
-  margin 0
+@import "include/_reset.styl"
+@import "include/_variable.styl"
+@import "include/_mixin.styl"
+@import "include/_keyframes.styl"
 
 .txC
   text-align center
@@ -12,7 +11,7 @@
 
  .index_header
     p
-        color #ddd
+      color #ddd
 
 // 各ページの親要素にページを分類するclassを作成する
 .ago_header
@@ -23,52 +22,79 @@
 #main_wrap
   width 100%
   height 100%
-  background #0ff
   position relative
+  &.page-1,&.page-2
+    background-color-animetion #14ff00, #f2ff86
+  //page1
   .h1_wrap
-    font-size 10vw
-    padding 10% 0
+    font-size 11vw
+    letter-spacing 1vw
+    padding 20% 0 10%
+    font-family "aquino"
+    color #ffa000
+    contour #fff1da
   .user_wrap
     font-size 3vw
     padding 4% 0 0
   .connect
     display block
-    text-decoration none
-    color #fff
-    width 60%
-    margin 5% auto 0
+    width 40%
+    margin 10% auto 0
     padding 3%
-    border-radius 100px
-    background #00f
     font-size 6vw
-    cursor pointer
-    box-sizing border-box
+    position relative
+    font-weight bold
+    text-decoration none
+    color #ffa000
+    background #fff1da
+    border-bottom solid 10px #ffa000
+    border-radius 15px 15px 0 0
+    &.page2
+      margin 0 auto
   //page2
   .char_set
-    height 100%
-    box-sizing border-box
     .result_wrap
       width 100%
-      background #fff
+      padding 2% 0 0
+      box-sizing border-box
       text-align center
       position relative
       > div
         display table
-        width 90%
-        margin 0 auto 5%
+        width 900px
+        height 450px
+        margin 0 auto
         font-size 10vw
+        background #ff0
+        hidden_test()
+        &.char1
+          background-image url(../img/1.png)
+          background-size 100% auto
+        &.char2
+          background-image url(../img/2.png)
+          background-size 100% auto
+        &.char3
+          background-image url(../img/3.png)
+          background-size 100% auto
+        &.char4
+          background-image url(../img/4.png)
+          background-size 100% auto
   .btn_wrap
-    display table
-    width 90%
+    display block
+    width 500px
     margin 0 auto
     button
+      button_delete()
       display inline-block
-      margin 0 7% 2% 0
-      padding 8%
+      width 50px
+      height 50px
+      border-radius 50%
+      border 2px solid #000
+      margin 30px 100px 50px 0
       cursor pointer
-      font-size 4vw
+      font-size 3vw
       color #000
       background #fff
       box-sizing border-box
       &:last-child
-        margin 0 0 2%
+        margin 0
