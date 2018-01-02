@@ -7,8 +7,4 @@ import styles from '../stylus/style.styl'
 import btn_post from './form_post'
 import App_start from './page1'
 import Main_test from './page2'
-
-ReactDOM.render(
-  <div>Hello React!!</div>,
-  document.getElementById('app'),
-);
+import App_result from './name'
