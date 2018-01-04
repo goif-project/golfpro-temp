@@ -64,6 +64,11 @@ module.exports = {
       filename: 'page3.html',
       template: './pug/page3.pug'
     }),
+    new htmlWebpackPlugin({
+      title: 'name',
+      filename: 'name.html',
+      template: './pug/name.pug'
+    }),
     /*
     new htmlWebpackPlugin({
       title: 'AWAKE - Hello',
